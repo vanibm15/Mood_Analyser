@@ -10,7 +10,15 @@ class MoodAnalyser1Test extends MoodAnalyser1 {
     @Test
     void givenMessageWhenSadShouldReturnSad() {
         MoodAnalyser1 mood = new MoodAnalyser1();
-        String result = MoodAnalyser1.analyzeMood("Sad");
+        String result = MoodAnalyser1.analyzeMood("sad mood");
+        assertEquals("SAD", result);
+    }
+
+    @Test
+    void givenMessageWhenIamInSadMoodShouldReturnSad() {
+        MoodAnalyser1 mood = new MoodAnalyser1();
+        String result = MoodAnalyser1.analyzeMood1("Iam in sad mood");
         assertEquals("SAD", result);
     }
 }
+
